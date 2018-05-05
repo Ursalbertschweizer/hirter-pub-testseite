@@ -37,7 +37,7 @@
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.7.2",
-    "uniqCompNum": 21,
+    "uniqCompNum": 22,
     "versionPublish": "4.7.2"
   },
   "pages": {
@@ -976,6 +976,58 @@
           "_once": "menu",
           "_params": {},
           "_anchor": "menu3-7"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".row": {
+              "justify-content": "flex-end",
+              "align-items": "stretch"
+            },
+            ".content-panel": {
+              "padding": "3rem",
+              "background-color": "@cardBg"
+            },
+            ".text-block": {
+              "padding-right": "0"
+            },
+            ".google-map": {
+              "width": "100%",
+              "height": "30rem",
+              "iframe": {
+                "width": "inherit",
+                "height": "100%",
+                ".place-card": {
+                  "margin-left": "40px !important"
+                }
+              },
+              "& when (@grayFilter)": {
+                "-webkit-filter": "grayscale(100%)",
+                "-moz-filter": "grayscale(100%)",
+                "-ms-filter": "grayscale(100%)",
+                "-o-filter": "grayscale(100%)",
+                "filter": "gray"
+              },
+              ".place-card": {
+                "margin-left": "40px !important"
+              }
+            }
+          },
+          "_name": "info2",
+          "_customHTML": "<section class=\"info2\" group=\"Info\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Oben\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Unten\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"checkbox\" title=\"Titel Anzeigen\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Untertitel Anzeigen\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Text Anzeigen\" name=\"showText\" checked>\n        <input type=\"color\" title=\"Karten-HG\" name=\"cardBg\" value=\"#033071\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"ChIJ2xyhKsxunUcRDri3yfy5nss\" value=\"Pontlatzerstrasse 29,\n6020 Innsbruck\">\n        <input type=\"checkbox\" title=\"Grau-Filter\" name=\"grayFilter\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Hintergrundbild\" value=\"../_images/background5.jpg\" selected parallax>\n            <input type=\"color\" title=\"Hintergrundfarbe\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Hintergrundvideo\" value=\"https://www.youtube.com/watch?v=pjiVuLVqWQg\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay-Farbe\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Transparenz\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-sm-12 col-lg-4 col-md-6 text-block\">            \n                <div class=\"content-panel\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style align-left mbr-white\" mbr-class=\"{'pb-2': !showSubtitle}\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                        So findest du uns:</h2>\n                    <h3 class=\"mbr-section-subtitle mbr-fonts-style align-left mbr-white pb-2\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                        Hirter Pub</h3>\n                    <p class=\"adress-block mbr-fonts-style align-left mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".adress-block\">\n                        Pontlatzer Straße 29<br>\n                        6020 Innsbruck</p>\n                </div>\n            </div>\n            <div class=\"col-sm-12 col-lg-8 col-md-6\">\n                <div class=\"google-map\" mbr-map=\"googleMap\"></div>\n            </div>\n        </div>\n   </div>\n</section>",
+          "_cid": "qRbwQxg0a5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "info2-l"
         }
       ]
     },
