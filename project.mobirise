@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Hirter Pub Test",
-    "currentPage": "index.html",
+    "currentPage": "hirter-pub-mottoparties.html",
     "theme": {
       "name": "restaurantm4",
       "title": "RestaurantM4",
@@ -37,7 +37,7 @@
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.7.2",
-    "uniqCompNum": 46,
+    "uniqCompNum": 47,
     "versionPublish": "4.7.2",
     "screenshot": "screenshot.png"
   },
@@ -3882,6 +3882,31 @@
           "_global": true,
           "_once": "menu",
           "_params": {}
+        },
+        {
+          "loadsvg": "@PROJECT_PATH@/assets/images/loading.svg",
+          "_params": {
+            "paddingTop": "4",
+            "paddingBottom": 0,
+            "postToLoad": "5",
+            "facebook": "hirterpub",
+            "twitter": "",
+            "google": "",
+            "youtube": "",
+            "bgColorRadio": true,
+            "bgColor": "#033071",
+            "bgImageRadio": false,
+            "bgImage": "@ADDONS_PATH@/social-feed/feed/assets/comments_bg.jpg",
+            "overlay": true,
+            "overlayColor": "#7e9b9f",
+            "overlayOpacity": 0.6
+          },
+          "alias": "social-feed",
+          "_tags": [
+            "Erweiterung"
+          ],
+          "_name": "feed",
+          "_anchor": "feed-1a"
         }
       ]
     },
