@@ -1784,277 +1784,14 @@ body {
 .cid-qRuokLRMA4 .content-slider-wrap {
   width: 73%;
 }
-.cid-qRaHHwx4Uo .nav-item:focus,
-.cid-qRaHHwx4Uo .nav-link:focus {
-  outline: none;
+.cid-qSvR9eXDNQ {
+  padding-top: 120px;
+  padding-bottom: 0px;
+  background-color: #033071;
 }
-.cid-qRaHHwx4Uo .dropdown .dropdown-menu .dropdown-item {
-  width: auto;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-.cid-qRaHHwx4Uo .dropdown .dropdown-menu .dropdown-item::after {
-  right: 0.5rem;
-}
-.cid-qRaHHwx4Uo .dropdown .dropdown-menu .dropdown-item .mbr-iconfont {
-  margin-left: -1.8rem;
-  padding-right: 1rem;
-  font-size: inherit;
-}
-.cid-qRaHHwx4Uo .dropdown .dropdown-menu .dropdown-item .mbr-iconfont:before {
-  display: inline-block;
-  transform: scale(1, 1);
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-.cid-qRaHHwx4Uo .collapsed .dropdown .dropdown-menu .dropdown-item {
-  padding: 0.235em 1.5em !important;
-  transition: none;
-  margin: 0 !important;
-}
-.cid-qRaHHwx4Uo .navbar {
-  min-height: 77px;
-  transition: all .3s;
-  background: #033071;
-}
-.cid-qRaHHwx4Uo .navbar.opened {
-  transition: all .3s;
-  background: #033071 !important;
-}
-.cid-qRaHHwx4Uo .navbar .dropdown-item {
-  padding: .235rem 1.5rem;
-}
-.cid-qRaHHwx4Uo .navbar .navbar-collapse {
-  justify-content: flex-end;
-  z-index: 1;
-}
-.cid-qRaHHwx4Uo .navbar.collapsed.opened .dropdown-menu {
-  top: 0;
-}
-.cid-qRaHHwx4Uo .navbar.collapsed .dropdown-menu {
-  background: transparent !important;
-}
-.cid-qRaHHwx4Uo .navbar.collapsed .dropdown-menu .dropdown-submenu {
-  left: 0 !important;
-}
-.cid-qRaHHwx4Uo .navbar.collapsed .dropdown-menu .dropdown-item:after {
-  right: auto;
-}
-.cid-qRaHHwx4Uo .navbar.collapsed .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
-  margin-left: .25rem;
-  border-top: 0.35em solid;
-  border-right: 0.35em solid transparent;
-  border-left: 0.35em solid transparent;
-  border-bottom: 0;
-  top: 55%;
-}
-.cid-qRaHHwx4Uo .navbar.collapsed ul.navbar-nav li {
-  margin: auto;
-}
-.cid-qRaHHwx4Uo .navbar.collapsed .dropdown-menu .dropdown-item {
-  padding: .25rem 1.5rem;
-  text-align: center;
-}
-.cid-qRaHHwx4Uo .navbar.collapsed .icons-menu {
-  padding-left: 0;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-@media (max-width: 991px) {
-  .cid-qRaHHwx4Uo .navbar.opened .dropdown-menu {
-    top: 0;
-  }
-  .cid-qRaHHwx4Uo .navbar .dropdown-menu {
-    background: transparent !important;
-  }
-  .cid-qRaHHwx4Uo .navbar .dropdown-menu .dropdown-submenu {
-    left: 0 !important;
-  }
-  .cid-qRaHHwx4Uo .navbar .dropdown-menu .dropdown-item:after {
-    right: auto;
-  }
-  .cid-qRaHHwx4Uo .navbar .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
-    margin-left: .25rem;
-    border-top: 0.35em solid;
-    border-right: 0.35em solid transparent;
-    border-left: 0.35em solid transparent;
-    border-bottom: 0;
-    top: 55%;
-  }
-  .cid-qRaHHwx4Uo .navbar .navbar-logo img {
-    height: 3.8rem !important;
-  }
-  .cid-qRaHHwx4Uo .navbar ul.navbar-nav li {
-    margin: auto;
-  }
-  .cid-qRaHHwx4Uo .navbar .dropdown-menu .dropdown-item {
-    padding: .25rem 1.5rem !important;
-    text-align: center;
-  }
-  .cid-qRaHHwx4Uo .navbar .navbar-brand {
-    flex-shrink: initial;
-    flex-basis: auto;
-    word-break: break-word;
-  }
-  .cid-qRaHHwx4Uo .navbar .navbar-toggler {
-    flex-basis: auto;
-  }
-  .cid-qRaHHwx4Uo .navbar .icons-menu {
-    padding-left: 0;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-  }
-}
-.cid-qRaHHwx4Uo .navbar.navbar-short {
-  background: #033071 !important;
-  min-height: 60px;
-}
-.cid-qRaHHwx4Uo .navbar.navbar-short .navbar-logo img {
-  height: 3rem !important;
-}
-.cid-qRaHHwx4Uo .navbar.navbar-short .navbar-brand {
-  padding: 0;
-}
-.cid-qRaHHwx4Uo .navbar-brand {
-  flex-shrink: 0;
-  align-items: center;
-  margin-right: 0;
-  padding: 0;
-  transition: all .3s;
-  word-break: break-word;
-  z-index: 1;
-}
-.cid-qRaHHwx4Uo .navbar-brand .navbar-caption {
-  line-height: inherit !important;
-}
-.cid-qRaHHwx4Uo .navbar-brand .navbar-logo a {
-  outline: none;
-}
-.cid-qRaHHwx4Uo .dropdown-item.active,
-.cid-qRaHHwx4Uo .dropdown-item:active {
-  background-color: transparent;
-}
-.cid-qRaHHwx4Uo .navbar-expand-lg .navbar-nav .nav-link {
-  padding: 0;
-}
-.cid-qRaHHwx4Uo .nav-dropdown .link.dropdown-toggle {
-  margin-right: 1.667em;
-}
-.cid-qRaHHwx4Uo .nav-dropdown .link.dropdown-toggle[aria-expanded="true"] {
-  margin-right: 0;
-  padding: 0.667em 1.667em;
-}
-.cid-qRaHHwx4Uo .navbar.navbar-expand-lg .dropdown .dropdown-menu {
-  background: #033071;
-}
-.cid-qRaHHwx4Uo .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
-  margin: 0;
-  left: 100%;
-}
-.cid-qRaHHwx4Uo .navbar .dropdown.open > .dropdown-menu {
-  display: block;
-}
-.cid-qRaHHwx4Uo ul.navbar-nav {
-  flex-wrap: wrap;
-}
-.cid-qRaHHwx4Uo .navbar-buttons {
-  text-align: center;
-}
-.cid-qRaHHwx4Uo button.navbar-toggler {
-  outline: none;
-  width: 31px;
-  height: 20px;
-  cursor: pointer;
-  transition: all .2s;
-  position: relative;
-  align-self: center;
-}
-.cid-qRaHHwx4Uo button.navbar-toggler .hamburger span {
-  position: absolute;
-  right: 0;
-  width: 30px;
-  height: 2px;
-  border-right: 5px;
-  background-color: #ffffff;
-}
-.cid-qRaHHwx4Uo button.navbar-toggler .hamburger span:nth-child(1) {
-  top: 0;
-  transition: all .2s;
-}
-.cid-qRaHHwx4Uo button.navbar-toggler .hamburger span:nth-child(2) {
-  top: 8px;
-  transition: all .15s;
-}
-.cid-qRaHHwx4Uo button.navbar-toggler .hamburger span:nth-child(3) {
-  top: 8px;
-  transition: all .15s;
-}
-.cid-qRaHHwx4Uo button.navbar-toggler .hamburger span:nth-child(4) {
-  top: 16px;
-  transition: all .2s;
-}
-.cid-qRaHHwx4Uo nav.opened .hamburger span:nth-child(1) {
-  top: 8px;
-  width: 0;
-  opacity: 0;
-  right: 50%;
-  transition: all .2s;
-}
-.cid-qRaHHwx4Uo nav.opened .hamburger span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  transition: all .25s;
-}
-.cid-qRaHHwx4Uo nav.opened .hamburger span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  transition: all .25s;
-}
-.cid-qRaHHwx4Uo nav.opened .hamburger span:nth-child(4) {
-  top: 8px;
-  width: 0;
-  opacity: 0;
-  right: 50%;
-  transition: all .2s;
-}
-.cid-qRaHHwx4Uo .navbar-dropdown {
-  padding: .5rem 1rem;
-  position: fixed;
-}
-.cid-qRaHHwx4Uo a.nav-link {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-.cid-qRaHHwx4Uo .mbr-iconfont {
-  font-size: 1.5rem;
-  padding-right: .5rem;
-}
-.cid-qRaHHwx4Uo .icons-menu {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  padding-left: 1rem;
-  text-align: center;
-}
-.cid-qRaHHwx4Uo .icons-menu span {
-  font-size: 20px;
-  color: #232323;
-}
-.cid-qRaHHwx4Uo .nav-link:hover,
-.cid-qRaHHwx4Uo .dropdown-item:hover,
-.cid-qRaHHwx4Uo .icons-menu .mbr-iconfont:hover {
-  color: #ffbc00 !important;
-}
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .cid-qRaHHwx4Uo .navbar {
-    height: 77px;
-  }
-  .cid-qRaHHwx4Uo .navbar.opened {
-    height: auto;
-  }
+.cid-qSvR9eXDNQ .mbr-text,
+.cid-qSvR9eXDNQ .ornament {
+  color: #ffbc00;
 }
 .cid-qRaHHwx4Uo .nav-item:focus,
 .cid-qRaHHwx4Uo .nav-link:focus {
@@ -2329,8 +2066,8 @@ body {
   }
 }
 .cid-qSuGpoMytU {
-  padding-top: 120px;
-  padding-bottom: 0px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-image: url("../../../assets/images/kellermeister-4-960x636.jpg");
 }
 .cid-qSuGpoMytU .mbr-overlay {
@@ -2351,8 +2088,8 @@ body {
   color: #ffbc00;
 }
 .cid-qSuIgXMFfc {
-  padding-top: 120px;
-  padding-bottom: 0px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-image: url("../../../assets/images/hirter-buben-720x427.jpg");
 }
 .cid-qSuIgXMFfc .mbr-overlay {
@@ -2373,8 +2110,8 @@ body {
   color: #ffbc00;
 }
 .cid-qSuJc0qy1N {
-  padding-top: 120px;
-  padding-bottom: 0px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-image: url("../../../assets/images/hirter-lkw-beklebung-2-870x587.jpg");
 }
 .cid-qSuJc0qy1N .mbr-overlay {
