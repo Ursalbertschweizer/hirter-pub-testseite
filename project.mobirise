@@ -10,7 +10,7 @@
         "secondaryColor": "#ffbc00",
         "successColor": "#ffbc00",
         "infoColor": "#ffbc00",
-        "warningColor": "#ffffff",
+        "warningColor": "#ffbc00",
         "dangerColor": "#444444",
         "mainFont": "Josefin Sans",
         "display1Font": "Open Sans",
