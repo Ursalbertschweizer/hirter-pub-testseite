@@ -4639,7 +4639,7 @@
         {
           "_params": {
             "token": "7943988114.727bfe1.767c10d0e6944226a8eb22a2cd8e200c",
-            "showTitle": true,
+            "showTitle": false,
             "layoutGridRadio": true,
             "imagesPerRowGrid": "3",
             "rows": "1",
@@ -4659,7 +4659,7 @@
             "overlayOpacity": 0.6
           },
           "title": "<b>Unsere nächsten Mottoparties</b>",
-          "buttons": "<a data-app-btn=\"true\" class=\"btn btn-md btn-primary\" href=\"#\">Show more</a>",
+          "buttons": "<a data-app-btn=\"true\" class=\"btn btn-md btn-primary display-4\" href=\"#\" data-max-id=\"1795154870737408044_7943988114\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove,-mbrLink\">Mehr zeigen</a>",
           "display2": "display-7",
           "display4": "display-4",
           "alias": "instagram-feed",
