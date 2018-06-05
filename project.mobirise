@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Hirter Pub Test",
-    "currentPage": "hirter-pub-mottoparties.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "restaurantm4",
       "title": "RestaurantM4",
@@ -37,7 +37,7 @@
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.7.2",
-    "uniqCompNum": 87,
+    "uniqCompNum": 90,
     "versionPublish": "4.7.6",
     "screenshot": "screenshot.png",
     "siteFonts": [
@@ -1315,6 +1315,103 @@
         },
         {
           "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-overlay": {
+              "background": "@overlayColor",
+              "& when (@gradientOverlay)": {
+                "background": "linear-gradient(45deg, @overlayColor, @overlayColor2)",
+                "& when (@typeGradient)": {
+                  "background": "radial-gradient(@overlayColor, @overlayColor2)"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "letter-spacing": ".5rem",
+              "color": "#ffbc00"
+            },
+            ".mbr-section-subtitle I": {
+              "color": "#ffbc00"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffbc00"
+            },
+            ".mbr-section-subtitle B": {
+              "color": "#ffbc00"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<section class=\"header2\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                     'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full-Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Oben\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"7\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Unten\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Pfeil Anzeigen\" name=\"showArrow\">\n        <input type=\"checkbox\" title=\"Titel Anzeigen\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Untertitel Anzeigen\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Text Anzeigen\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Button(s) Anzeigen\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Hintergrundbild\" value=\"@PROJECT_PATH@/assets/images/kellermeister-4-960x636.jpg\" parallax>\n            <input type=\"color\" title=\"Hintergrundfarbe\" value=\"#033071\" selected>\n            <input type=\"video\" title=\"Hintergrundvideo\" value=\"https://www.youtube.com/watch?v=pjiVuLVqWQg\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay-Farbe\" name=\"overlayColor\" value=\"#033071\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"checkbox\" title=\"Farbverlauf-Overlay\" name=\"gradientOverlay\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay-Farbe 2\" name=\"overlayColor2\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'&&gradientOverlay\">\n        <input type=\"checkbox\" title=\"Linearer/Radialer Farbverlauf\" name=\"typeGradient\" condition=\"gradientOverlay\">\n        <input type=\"range\" inline title=\"Transparenz\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"media-container-column mbr-black col-md-10\">\n                <h2 class=\"mbr-section-subtitle align-center mbr-fonts-style\" mbr-class=\"{'pb-2': !showTitle}\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\"><font color=\"#ffbc00\"><b>Mottoparties</b></font></h2>\n                <h1 class=\"mbr-section-title align-center pb-2 mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Über unseren Instagram Feed bleibst du immer auf dem Laufenden&nbsp;</h1>\n                \n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Damit du keine unserer Veranstaltungen versäumst, haben wir einen Instagram Feed mit den aktuellsten News über unsere verschiedenen Parties eingerichtet!&nbsp;<br>Versäume keine unserer legendären Mottoparties.</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-md btn-white\" href=\"https://mobirise.com\">Speisekarte Sehen</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow && fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-arrow-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_anchor": "header2-2f",
+          "_isUserblock": true,
+          "_sourceTheme": "restaurantm4",
+          "_cid": "qU7BoXmcIm",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, .ornament": {
+              "color": "#ffbc00"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Oben\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Unten\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Unterstrich Anzeigen\" name=\"showUnderline\" checked>\n        <input type=\"color\" title=\"Unterstrichfarbe\" name=\"underlineColor\" value=\"#ffbc00\" condition=\"showUnderline\">\n        <input type=\"color\" title=\"Hintergrundfarbe\" name=\"bgColor\" value=\"#033071\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-10 col-sm-12 text-section\">\n                <p class=\"mbr-fonts-style mbr-text align-center\" data-app-selector=\".mbr-text, .ornament\" mbr-theme-style=\"display-7\">Damit du keine unserer Veranstaltungen versäumst, haben wir einen Instagram Feed mit den aktuellsten News über unsere verschiedenen Parties eingerichtet! \n<br>Versäume keine unserer legendären Mottoparties.</p>\n                <div class=\"py-3 ornament align-center\" mbr-if=\"showUnderline\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 133 20\" height=\"20\" width=\"150\" fill=\"{{underlineColor}}\">\n                        <g><path d=\"M127.18,6.19C121-.05,109.94-.24,101.84.1,90.84.56,80,3.3,69.32,5.77c-8,1.86-16,3.63-24,5.72-9.21,2.41-18.6,4.72-28.14,5.19-4.1.2-8.48,0-12.16-2a6.6,6.6,0,0,1-2.7-9A5.46,5.46,0,0,1,7.07,2.77c4-.22,6.73,8.39-.08,4.58a.49.49,0,0,0-.49.84c4.88,3,10.8,0,5.4-4.91C7.6-.63.4,2.06,0,8-1,24,28.25,17,36.29,15.24,53.74,11.37,70.9,6.44,88.53,3.33c11.1-2,24.75-3.54,35.06,2.19a16,16,0,0,1,6.86,8.85c1.29,4.31-4.35,4.2-7,3.52-4.84-1.26-2.42-8,1.22-3,.61.83,2,0,1.4-.82-2.15-2.93-6.71-4.9-7.12.35s8.36,7.24,11.72,4.47C135,15.32,129.91,9,127.18,6.19Z\"></path></g>\n                    </svg>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qU7D8JwLWJ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-2h"
+        },
+        {
+          "_params": {
+            "token": "7943988114.727bfe1.767c10d0e6944226a8eb22a2cd8e200c",
+            "showTitle": false,
+            "layoutGridRadio": false,
+            "imagesPerRowGrid": 4,
+            "rows": 2,
+            "showMoreButton": true,
+            "layoutSliderRadio": true,
+            "imagesPerRowSlider": "4",
+            "spacing": "13",
+            "fullWidth": true,
+            "paddingTop": 1,
+            "paddingBottom": 1,
+            "bgColorRadio": true,
+            "bgColor": "#033071",
+            "bgImageRadio": false,
+            "bgImage": "@PROJECT_PATH@/assets/images/instagram-background.jpg",
+            "overlay": false,
+            "overlayColor": "#efefef",
+            "overlayOpacity": 0.6
+          },
+          "title": "Instagram Feed",
+          "buttons": "<a data-app-btn=\"true\" class=\"btn btn-md btn-primary\" href=\"#\">Show more</a>",
+          "display2": "display-2",
+          "display4": "display-4",
+          "alias": "instagram-feed",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "instagram-feed-block",
+          "_anchor": "instagram-feed-block-2g"
+        },
+        {
+          "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
             "& when (@bg-type = 'color')": {
@@ -1424,7 +1521,7 @@
             }
           },
           "_name": "content1",
-          "_customHTML": "<section class=\"mbr-section content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Oben\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Unten\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Unterstrich Anzeigen\" name=\"showUnderline\" checked>\n        <input type=\"color\" title=\"Unterstrichfarbe\" name=\"underlineColor\" value=\"#ffbc00\" condition=\"showUnderline\">\n        <input type=\"color\" title=\"Hintergrundfarbe\" name=\"bgColor\" value=\"#033071\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-10 col-sm-12 text-section\">\n                <p class=\"mbr-fonts-style mbr-text align-center\" data-app-selector=\".mbr-text, .ornament\" mbr-theme-style=\"display-5\"><b>Hirter Pokerverein</b></p>\n                <div class=\"py-3 ornament align-center\" mbr-if=\"showUnderline\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 133 20\" height=\"20\" width=\"150\" fill=\"{{underlineColor}}\">\n                        <g><path d=\"M127.18,6.19C121-.05,109.94-.24,101.84.1,90.84.56,80,3.3,69.32,5.77c-8,1.86-16,3.63-24,5.72-9.21,2.41-18.6,4.72-28.14,5.19-4.1.2-8.48,0-12.16-2a6.6,6.6,0,0,1-2.7-9A5.46,5.46,0,0,1,7.07,2.77c4-.22,6.73,8.39-.08,4.58a.49.49,0,0,0-.49.84c4.88,3,10.8,0,5.4-4.91C7.6-.63.4,2.06,0,8-1,24,28.25,17,36.29,15.24,53.74,11.37,70.9,6.44,88.53,3.33c11.1-2,24.75-3.54,35.06,2.19a16,16,0,0,1,6.86,8.85c1.29,4.31-4.35,4.2-7,3.52-4.84-1.26-2.42-8,1.22-3,.61.83,2,0,1.4-.82-2.15-2.93-6.71-4.9-7.12.35s8.36,7.24,11.72,4.47C135,15.32,129.91,9,127.18,6.19Z\"></path></g>\n                    </svg>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content1\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Oben\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Unten\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Unterstrich Anzeigen\" name=\"showUnderline\" checked>\n        <input type=\"color\" title=\"Unterstrichfarbe\" name=\"underlineColor\" value=\"#ffbc00\" condition=\"showUnderline\">\n        <input type=\"color\" title=\"Hintergrundfarbe\" name=\"bgColor\" value=\"#033071\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-10 col-sm-12 text-section\">\n                <p class=\"mbr-fonts-style mbr-text align-center\" data-app-selector=\".mbr-text, .ornament\" mbr-theme-style=\"display-5\"><b>Hirter Pokerverein</b></p>\n                <div class=\"py-3 ornament align-center\" mbr-if=\"showUnderline\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 133 20\" height=\"20\" width=\"150\" fill=\"{{underlineColor}}\">\n                        <g><path d=\"M127.18,6.19C121-.05,109.94-.24,101.84.1,90.84.56,80,3.3,69.32,5.77c-8,1.86-16,3.63-24,5.72-9.21,2.41-18.6,4.72-28.14,5.19-4.1.2-8.48,0-12.16-2a6.6,6.6,0,0,1-2.7-9A5.46,5.46,0,0,1,7.07,2.77c4-.22,6.73,8.39-.08,4.58a.49.49,0,0,0-.49.84c4.88,3,10.8,0,5.4-4.91C7.6-.63.4,2.06,0,8-1,24,28.25,17,36.29,15.24,53.74,11.37,70.9,6.44,88.53,3.33c11.1-2,24.75-3.54,35.06,2.19a16,16,0,0,1,6.86,8.85c1.29,4.31-4.35,4.2-7,3.52-4.84-1.26-2.42-8,1.22-3,.61.83,2,0,1.4-.82-2.15-2.93-6.71-4.9-7.12.35s8.36,7.24,11.72,4.47C135,15.32,129.91,9,127.18,6.19Z\"></path></g>\n                    </svg>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "qU7e6gvdXU",
           "_anchor": "content1-24",
           "_protectedParams": [],
