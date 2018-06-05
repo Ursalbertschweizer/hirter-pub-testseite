@@ -37,7 +37,7 @@
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.7.2",
-    "uniqCompNum": 86,
+    "uniqCompNum": 87,
     "versionPublish": "4.7.6",
     "screenshot": "screenshot.png",
     "siteFonts": [
@@ -4637,6 +4637,52 @@
       },
       "components": [
         {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-overlay": {
+              "background": "@overlayColor",
+              "& when (@gradientOverlay)": {
+                "background": "linear-gradient(45deg, @overlayColor, @overlayColor2)",
+                "& when (@typeGradient)": {
+                  "background": "radial-gradient(@overlayColor, @overlayColor2)"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "letter-spacing": ".5rem",
+              "color": "#ffbc00"
+            },
+            ".mbr-section-subtitle I": {
+              "color": "#ffbc00"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffbc00"
+            },
+            ".mbr-section-subtitle B": {
+              "color": "#ffbc00"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<section class=\"header2\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                     'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full-Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Oben\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"9\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Unten\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Pfeil Anzeigen\" name=\"showArrow\">\n        <input type=\"checkbox\" title=\"Titel Anzeigen\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Untertitel Anzeigen\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Text Anzeigen\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Button(s) Anzeigen\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Hintergrundbild\" value=\"@PROJECT_PATH@/assets/images/kellermeister-4-960x636.jpg\" parallax>\n            <input type=\"color\" title=\"Hintergrundfarbe\" value=\"#033071\" selected>\n            <input type=\"video\" title=\"Hintergrundvideo\" value=\"https://www.youtube.com/watch?v=pjiVuLVqWQg\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay-Farbe\" name=\"overlayColor\" value=\"#033071\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"checkbox\" title=\"Farbverlauf-Overlay\" name=\"gradientOverlay\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay-Farbe 2\" name=\"overlayColor2\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'&&gradientOverlay\">\n        <input type=\"checkbox\" title=\"Linearer/Radialer Farbverlauf\" name=\"typeGradient\" condition=\"gradientOverlay\">\n        <input type=\"range\" inline title=\"Transparenz\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"media-container-column mbr-black col-md-10\">\n                <h2 class=\"mbr-section-subtitle align-center mbr-fonts-style\" mbr-class=\"{'pb-2': !showTitle}\" mbr-theme-style=\"display-1\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\"><font color=\"#ffbc00\"><b>Mottoparties</b></font></h2>\n                <h1 class=\"mbr-section-title align-center pb-2 mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Über unseren Instagram Feed bleibst du immer auf dem Laufenden&nbsp;</h1>\n                \n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Damit du keine unserer Veranstaltungen versäumst, haben wir einen Instagram Feed mit den aktuellsten News über unsere verschiedenen Parties eingerichtet!&nbsp;<br>Versäume keine unserer legendären Mottoparties.</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-md btn-white\" href=\"https://mobirise.com\">Speisekarte Sehen</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow && fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-arrow-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_anchor": "header2-2e",
+          "_isUserblock": true,
+          "_sourceTheme": "restaurantm4",
+          "_cid": "qU7w5JnHsn",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
           "_params": {
             "token": "7943988114.727bfe1.767c10d0e6944226a8eb22a2cd8e200c",
             "showTitle": false,
@@ -4648,7 +4694,7 @@
             "imagesPerRowSlider": 4,
             "spacing": "8",
             "fullWidth": true,
-            "paddingTop": "4",
+            "paddingTop": "1",
             "paddingBottom": 1,
             "bgColorRadio": true,
             "bgColor": "#033071",
